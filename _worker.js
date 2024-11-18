@@ -1714,13 +1714,13 @@ async function sendMessage(type, ip, add_data = "") {
 			headers: {
 				'Accept': 'text/html,application/xhtml+xml,application/xml;',
 				'Accept-Encoding': 'gzip, deflate, br',
-				'User-Agent': 'Mozilla/5.0 Chrome/90.0.4430.72'
-			}
-		});
-	}
+				'用户代理'：'Mozilla/5.0 Chrome/90.0.4430.72''User-Agent': 'Mozilla/5.0 Chrome/90.0.4430.72'
+			}}
+		});});
+	}}
 }
 
-function isValidIPv4(address) {
-	const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-	return ipv4Regex.test(address);
+function函数 isValidIPv4(地址)isValidIPv4(address) {
+	常量 ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[ 0-4][0-9]|[01]?[0-9][0-9]?)\ .(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0 -4][0-9]|[01]?[0-9][0-9]?)$/;const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+	返回 ipv4Regex.test(地址);return ipv4Regex.test(address);
 }
