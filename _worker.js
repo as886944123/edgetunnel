@@ -11,17 +11,17 @@ let proxyIP = '';// 小白勿动，该地址并不影响你的网速，这是给
 let sub = '';// 留空则使用内置订阅
 let subconverter = 'SUBAPI.fxxk.dedyn.io';// clash订阅转换后端，目前使用CM的订阅转换功能。自带虚假uuid和host订阅。
 let subconfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"; //订阅配置文件
-让 subProtocol = 'https' ;
-// 用户名和密码不能包含特殊字符
-// 设置地址会忽略proxyIP
-// 示例：user:pass@host:port 或 host:port
-让 socks5地址= '' ;
+let subProtocol = 'https';
+// The user name and password do not contain special characters
+// Setting the address will ignore proxyIP
+// Example:  user:pass@host:port  or  host:port
+let socks5Address = '';
 
-if  ( ! isValidUUID (用户ID ) )  {
-	抛出 新错误（'uuid 无效' ）；
+if (!isValidUUID(userID)) {
+	throw new Error('uuid is not valid');
 }
 
-让 parsedSocks5Address = { } ;
+let parsedSocks5Address = {}; 
 let enableSocks = false;
 
 // 虚假uuid和hostname，用于发送给配置生成服务
@@ -1714,13 +1714,13 @@ async function sendMessage(type, ip, add_data = "") {
 			headers: {
 				'Accept': 'text/html,application/xhtml+xml,application/xml;',
 				'Accept-Encoding': 'gzip, deflate, br',
-				'用户代理'：'Mozilla/5.0 Chrome/90.0.4430.72''User-Agent': 'Mozilla/5.0 Chrome/90.0.4430.72'
-			}}
-		});});
-	}}
+				'User-Agent': 'Mozilla/5.0 Chrome/90.0.4430.72'
+			}
+		});
+	}
 }
 
-function函数 isValidIPv4(地址)isValidIPv4(address) {
-	常量 ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[ 0-4][0-9]|[01]?[0-9][0-9]?)\ .(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0 -4][0-9]|[01]?[0-9][0-9]?)$/;const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-	返回 ipv4Regex.test(地址);return ipv4Regex.test(address);
+function isValidIPv4(address) {
+	const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+	return ipv4Regex.test(address);
 }
